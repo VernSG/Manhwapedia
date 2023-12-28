@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <link href="https://allfont.net/allfont.css?fonts=ninja-naruto" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css" type="text/css">
+    <link
+        href="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.6qtY7eooQBTfiSVjtrLrGQHaEj%26pid%3DApi&f=1"
+        rel="icon" type="assets/logoke1.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="images/icon" href="assets/logoke1.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <title>ManhwaPedia</title>
+</head>
+
+<style>
+    :root {
+        --col1: #222;
+        --col2: black;
+        --swiper-image-ratio: 34%;
+        /* ratio 16:9 = 56.25% */
+        --swiper-width: 50%;
+        --swiper-inactive-scale: .85;
+        /* makes the other slide smaller */
+        /* responsive settings */
+        --swiper-mobile-width: 90%;
+        --swiper-mobile-inactive-scale: 1;
+    }
+
+    h2.card-title {
+        color: var(--col2);
+    }
+
+    .to-top {
+        color: #fff;
+        position: fixed;
+        bottom: 16px;
+        right: 32px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 32px;
+        background: #1f1f1f;
+        text-decoration: none;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.4s;
+        z-index: 999;
+    }
+
+    .bottom {
+        color: #fff;
+        position: fixed;
+        top: 16px;
+        right: 32px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 32px;
+        background: #1f1f1f;
+        text-decoration: none;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.4s;
+        z-index: 10;
+    }
+
+    .to-top.active,
+    .bottom.active {
+        bottom: 32px;
+        pointer-events: auto;
+        opacity: 1;
+    }
+
+    .to-top:hover,
+    .bottom:hover {
+        color: #fff;
+        text-decoration: none;
+    }
+</style>
+
+<style>
+    .dark-mode {
+        background-color: black;
+        color: white;
+        --col1: #ffe15a;
+        --col2: white;
+    }
+</style>
+
+<body>
+    <a href="#" id="scrolltopBtn" class="to-top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+
+    <button class="bottom">
+        <i class="fa fa-arrow-down"></i>
+    </button>
+
+    <div class="loader">
+
+        <!-- Changed Navbar Content and Search box below the navbar -->
+
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light d-flex justify-content-between" id="navBackground"
+                style="background-color:#d7dee79c; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                <a class="navbar-brand brand1 heading" href="#" style="color: var(--col1);">
+                    <div id="animation" class="animate one">
+                        M</span><span>a</span><span>n</span><span>h</span><span>w</span><span>a</span><span>P</span><span>e</span><span>d</span><span>i</span><span>a</span>
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link nav-home " href="./index.html"
+                            style="color: var(--col1); border: #1f1f1f solid ; border-radius: 20px; border-width: 2px; height: 45px; margin-top: 2px; ">Home</a>
+                        <div class="theme-btn nav-link">
+                            <button id="btn" class="btn btn-outline-dark btn-md" style=" border-radius: 30%;"
+                                onclick="darkMode()"><i id="themeIcon" class="bi bi-brightness-high "></i></button>
+                        </div>
+                    </div>
+                </div>
+                <form class="nosubmit">
+                    <input class="nosubmit" type="search" placeholder="Search for Character">
+                </form>
+    </div>
+
+    </nav>
+
+
+    </header>
+    </div>
+
+
+
+    <main>
+
+        <div class="carouselContainer">
+            <div class="swiper">
+
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <div class="swiper-image">
+                            <div class="image">
+                                <img src="./assets/1-manhwa-isekai.jpg" alt="..">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <div class="swiper-image">
+                            <div class="image">
+                                <img src="./assets/manhwa2.webp" alt="..">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <div class="swiper-image">
+                            <div class="image">
+                                <img src="./assets/manhwa3.webp" alt="..">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-image">
+                            <div class="image">
+                                <img src="./assets/manhwa4.jpg" alt="..">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-image">
+                            <div class="image">
+                                <img src="./assets/manhwa5.jpg" alt="..">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-image">
+                            <div class="image">
+                                <img src="./assets/manhwa6.png" alt="..">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev" style="width: 53px;height : 53px; margin-left: 18px;"></div>
+                <div class="swiper-button-next" style="width: 53px;height : 53px;margin-right: 18px;"></div>
+            </div>
+        </div>
+
+
+
+       
+
+        <p align="center" style="color: var(--col1);">
+            <h1 style="color: var(--col1);">
+                <div id="animation" class="animate one">
+                All Manhwa characters
+                </div>
+           </h1>
+        </p>
+        <hr width="70%">
+
+        <!-- Do not alter the code above this line unless you want to improve/ fix the website -->
+
+        <!-- Card section starts -->
+        <div class="container" id="cont">
+
+            <!--Sample Naruto card start-->
+            <div class="card mb-3 card-bg my-4" style="max-width: 100%;">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="./images/Kim_Dokja_Cover.webp" alt="Kim_Dokja_Cover" height="390px" width="300px">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h2 class="card-title">Kim Dokja</h2>
+                            <p class="card-text">Kim Dokja is the main protagonist of Omniscient Reader's Viewpoint.</p>
+                            <p>Kim Dokja has a thin face and pale skin. His hair is thin and black; he has long eyelashes and dark circles.[4] His countenance is calm and fresh, although somewhat edgy. There is a marked difference in his appearance when he smiles and when he's expressionless. As an adult, he has a slender physique, being rather skinny prior to the beginning of the scenarios, although he has become rather muscular due to raising his Strength stat.[5] He has burn scarring/tanning due to the probability storm he weathered after Gigantomachia.[6] He also has scars on his hands[7] and presumably the rest of his body as well from the numerous fights he has been through. The number 6424 is "stitched" into his left forearm, from his brief period masquerading as a Removal Slave in the 73rd Demon Realm.[8]
+                            <hr>
+                            <p>Contributed by Valkrie (Owner)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+                                <!--Add your card below this line -->
+    </main>
+    <!-- <footer> -->
+
+    <div class="pagination " style="margin-bottom: 20px; ">
+        <li class="page-item previous-page "><a class="page-link " href="# ">Prev</a></li>
+        <li class="page-item next-page "><a class="page-link " href="# ">Next</a></li>
+    </div>
+
+
+    <!-- Do not alter the code below this line unless you want to improve the website -->
+
+    <!-- Footer ANd Contact Section  -->
+    <section class="contact-area " id="contact ">
+        <div class="container ">
+            <div class="row ">
+                <div class="col-lg-6 offset-lg-3 ">
+                    <div class="contact-content text-center ">
+                        <a href="./index.html "><img src="./assets/Manhwapedia.png " alt="logo "></a>
+                        <p>There is immense power when a group of people with similar interests gets together to work
+                            toward the same goals. </p>
+                        <div class="hr "></div>
+                        <h6>Technology, Information and Internet</h6>
+                        <div class="contact-social ">
+                            <ul>
+                                <li><a class="hover-target " href=" "><i class="fa fa-facebook-f "></i></a></li>
+                                <li><a class="hover-target "
+                                        href=" "><i
+                                            class="fa fa-linkedin "></i></a></li>
+                                <li><a class="hover-target " href="https://github.com/VernSG "><i
+                                            class="fa fa-github "></i></a></li>
+                                <li><a class="hover-target " href=" "><i class=" fa fa-instagram "></i></a></li>
+                                <li><a class="hover-target " href=" "><i class="fa fa-envelope "></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js "
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous ">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js "
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns " crossorigin="anonymous ">
+        </script>
+    <script src="searchbar.js "></script>
+    <script src="searchresults.js "></script>
+    <script src="scrollEffect.js "></script>
+    <script src="/indexdarkmode.js "></script>
+    <script src="scrolltotop.js "></script>
+    <script src="pagination.js "></script>
+    <!-- <script src="swipper.js "></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js "></script>
+
+    <script>
+        /* ------- Scroll To Top Button -------*/
+
+        const toTop = document.querySelector(".to-top ");
+        const toBottom = document.querySelector(".bottom ");
+        if (document.documentElement.scrollTop < document.documentElement.scrollHeight - 1000) {
+            toBottom.classList.add("active ");
+        } else {
+            toBottom.classList.remove("active ");
+        }
+        window.addEventListener("scroll ", () => {
+
+            if (window.pageYOffset > 400) {
+                toTop.classList.add("active ");
+            } else {
+                toTop.classList.remove("active ");
+            }
+            if (document.documentElement.scrollTop < document.documentElement.scrollHeight - 1000) {
+                toBottom.classList.add("active ");
+            } else {
+                toBottom.classList.remove("active ");
+            }
+
+        });
+
+        function scrollToBottom() {
+            console.log(document.documentElement.scrollTop, document.documentElement.scrollHeight);
+            window.scrollTo({
+                top: document.documentElement.scrollHeight,
+                behaviour: "smooth "
+            })
+        }
+        toBottom.addEventListener("click ", scrollToBottom);
+    </script>
+
+
+    <script>
+        function darkMode() {
+            var element = document.body;
+            //Added bootstrap navbar class for dark and light mode
+            let navBackground = document.getElementById("navBackground");
+            let toggle = document.querySelector(".navbar-toggler");
+            const btn = document.getElementById('btn');
+            let themeIcon = document.getElementById("themeIcon");
+            const brandLetters = document.getElementById("animation");
+
+            if (btn.classList.contains("btn-outline-dark")) {
+                btn.classList.remove("btn-outline-dark");
+                btn.classList.add("btn-outline-light");
+                navBackground.classList.remove("bg-light")
+                navBackground.classList.add("bg-dark")
+                themeIcon.classList.remove("bi-brightness-high")
+                themeIcon.classList.add("bi-moon-stars")
+                toggle.classList.add("custom-toggler")
+            } else {
+                btn.classList.add("btn-outline-dark");
+                navBackground.classList.add("bg-light")
+                navBackground.classList.remove("bg-dark")
+                themeIcon.classList.remove("bi-moon-stars")
+                themeIcon.classList.add("bi-brightness-high")
+                toggle.classList.remove("custom-toggler")
+            }
+
+            element.classList.toggle("dark-mode");
+            brandLetters.classList.toggle("brand-dark");
+        }
+
+        const swiper = new Swiper('.swiper', {
+            loop: true,
+            slidesPerView: 'auto',
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false
+            },
+            centeredSlides: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            }
+        });
+    </script>
+</body>
