@@ -1,7 +1,7 @@
 
 # ManhwaPedia
 
-There is no doubt that most of our childhood was spent watching anime, we have seen and experienced it all. AnimePedia is a thanks-giving repository for the Anime Community ( for all the Otakus out there :) ) where literally anyone can contribute their favourite characters or browse them! A simple application for weebs, made using HTML, CSS, and JavaScript.
+There is no doubt that most of our childhood was spent watching anime, we have seen and experienced it all. ManhwaPedia is a thanks-giving repository for the Manhwa Community ( for all the Otakus out there :) ) where literally anyone can contribute their favourite characters or browse them! A simple application for weebs, made using HTML, CSS, and JavaScript.
 
 Website: [ManhwaPedia](https://manhwapedia.site)
 
