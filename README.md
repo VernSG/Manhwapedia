@@ -1,11 +1,11 @@
 
 # ManhwaPedia
 
-There is no doubt that most of our childhood was spent watching anime, we have seen and experienced it all. ManhwaPedia is a thanks-giving repository for the Manhwa Community ( for all the Otakus out there :) ) where literally anyone can contribute their favourite characters or browse them! A simple application for weebs, made using HTML, CSS, and JavaScript.
+There is no doubt that most of our childhood was spent watching anime, we have seen and experienced it all. ManhwaPedia is a thanks-giving repository for the Manhwa Community ( for all the Manhwa Lovers out there :) ) where literally anyone can contribute their favorite characters or browse them! A simple application for weebs, made using HTML, CSS, and JavaScript.
 
 Website: [ManhwaPedia](https://manhwapedia.site)
 
-This respository is maintained by: Valkrie
+This repository is maintained by: Valkrie
 
 Note: <i>This repository is created with the sole intent of guiding beginners to their initial Open Source contributions.</i>
 
